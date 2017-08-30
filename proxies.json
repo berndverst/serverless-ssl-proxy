@@ -1,0 +1,17 @@
+{
+    "$schema": "http://json.schemastore.org/proxies",
+    "proxies": {
+        "root": {
+            "matchCondition": {
+                "route": "/"
+            },
+            "backendUri": "http://%REMOTE_HOST%/"
+        },
+        "path": {
+            "matchCondition": {
+                "route": "/{*path}"
+            },
+            "backendUri": "http://%REMOTE_HOST%/{path}"
+        }
+    }
+}
